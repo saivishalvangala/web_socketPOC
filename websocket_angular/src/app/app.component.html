@@ -1,0 +1,10 @@
+<form #userForm ="ngForm" [class.hidden]="!registration" (ngSubmit)="connect(userForm.value)">
+        <input type="text" placeholder="enter yourName" name="fromName" #fromName ngModel>
+        <button type="submit">Register</button>
+</form>
+
+<form #chatForm = "ngForm" (ngSubmit)="sendMessage(chatForm.value)" [class.hidden]="registration">
+       <input type="text" placeholder="enter toName" name="toName" ngModel>
+        <input type="text" placeholder="enter your message" name="content" ngModel>
+        <button type="submit">Send message</button>
+</form>
